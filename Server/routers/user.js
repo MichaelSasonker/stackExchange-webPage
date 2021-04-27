@@ -1,7 +1,7 @@
 const express = require('express');
 const router = new express.Router();
-const question = require('../models/user');
-const scrap = require('../');
+const Question = require('../models/user');
+const scrap = require('../scraping/scrap');
 
 //get all accounts ---------------
 router.get('/api/users', async (req, res) => {
@@ -16,10 +16,13 @@ router.get('/api/users', async (req, res) => {
 //add a new question --------------
 router.post('/api/users', async (req, res) => {
 	const url = req.body.url;
-	const body = await scrap(url);
+	// const body = await scrap(url);
 	// const question = new User(req.body);
-	console.log(body[0]);
-	const question = new question(body[0]);
+	// console.log(body[0]);
+	const sc = await scrap;
+	console.log(sc);
+
+	const question = new Question(req.body);
 	try {
 		await question.save();
 		res.status(201).send(question);
