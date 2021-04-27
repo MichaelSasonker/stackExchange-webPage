@@ -2,7 +2,7 @@
 /* @font-face {font-family: "KG HAPPY"; src: url('../../../public/font/KGHAPPY.ttf')}; */
 
 .home-container{
-    /* background: url() center center/cover no-repeat; */
+    background: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg') center center/cover no-repeat;
     height: 100vh;
     width: 100%;
     display:flex;
