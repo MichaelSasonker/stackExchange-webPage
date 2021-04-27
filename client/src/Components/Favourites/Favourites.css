@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+.wishList {
+    background-image: url();
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+    width:100vw;
+    height: 90vh;
+  }
+
+ 
+.todo {
+    font-family: 'RocknRoll One', sans-serif;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 3px 10px;
+  }
+
+  h4{
+    font-family: 'RocknRoll One', sans-serif; 
+  }
+
+ #bookInput {
+     width: 10vw;
+     height: 10vh;   
+ }
+
