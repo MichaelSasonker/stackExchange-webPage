@@ -61,7 +61,7 @@ function Navbar() {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Wish-list 
+                  Favourites 
                   <BiHeart/>
                 </Link>
               </li>
