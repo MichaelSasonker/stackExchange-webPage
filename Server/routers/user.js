@@ -15,18 +15,21 @@ router.get('/api/users', async (req, res) => {
 
 //add a new question --------------
 router.post('/api/users', async (req, res) => {
+	console.log(req.body.url);
 	const url = req.body.url;
-	// const body = await scrap(url);
+	const body = await scrap(url);
+	console.log(body);
 	// const question = new User(req.body);
 	// console.log(body[0]);
 	// console.log('good')
-	const sc = await scrap;
-	console.log(sc);
+	// const sc = await scrap;
+	// console.log(sc);
 
 	const question = new Question(req.body);
 	try {
 		await question.save();
-		res.status(201).send(question);
+		// res.status(201).send(question);
+		res.status(201).send({ 'title': body });
 	} catch (e) {
 		res.status(400).send(e);
 	}

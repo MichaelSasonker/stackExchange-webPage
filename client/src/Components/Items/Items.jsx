@@ -5,7 +5,7 @@ export default function Items() {
   const [items, setItems] = useState([]);
   const [search, setSearch] = useState('');
   // const [query, setQuery] = useState('https://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide');
-  const [userData, setUserData] = '';
+  const [userData, setUserData] = useState('');
 
 // useEffect(() => {
 //     getItems();
@@ -28,12 +28,15 @@ const updateSearch = (e) => {
 
   const createAccount = async () => { 
     console.log(search)
-    const { data } = await axios.post('http://localhost:3001/api/users',{ "body.url": search} ); 
-    setUserData([data]); 
+    // const { data } = await axios.post('http://localhost:3001/api/users',{ "url": search } ); 
+  const {title} = await axios.post('http://localhost:3001/api/users',{ "url": search } ); 
+
+    setUserData([title]); 
   }; 
 
 return(
     <div className='CONTAINER'>
+      {console.log(userData)}
            <form onSubmit={getSearch} className="search-form">
         <input
           className='search-bar'
