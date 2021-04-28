@@ -7,7 +7,7 @@
   
   .home,
   .finder,
-  .wish-list,
+  .FAVOURITES,
   .sign-up {
     display: flex;
     height: 90vh;

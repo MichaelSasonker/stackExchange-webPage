@@ -25,9 +25,8 @@ export default function SaveF() {
         return(
           <div className='SAVED_CONTAINER'>
               <div className='FAVOURITES'>
-                  {/* {favourites.map((favourite ,index)=>(
-                    //TO DO//
-                  ))} */}
+                
+
                   onClick={deleteFromfavourites}
                   {/* buttonText=DELETE' */}
               </div>

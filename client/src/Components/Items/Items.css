@@ -1,0 +1,27 @@
+:root{
+    background-image: linear-gradient(white, rgb(62, 116, 233))
+}
+
+.ITEMS{
+    /* background-image: url(); */
+    background-image: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: grey;
+    font-size: 100px;
+    width:100vw;
+    height: 90vh;
+}
+.search-bar{
+    background: #190f61;
+    width: 50vw;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+}

@@ -23,10 +23,26 @@ const getSearch = (e) => {
   
 return(
     <div className='CONTAINER'>
+           <form onSubmit={getSearch} className="search-form">
+        <input
+          className="search-bar"
+          placeholder="Type"
+          type="text"
+          value={search}
+          onChange={updateSearch}
+        />
+        <button className="search-button" type="Submit">
+          Search
+        </button>
+      </form>
     <div className='ITEMS'>
-        {/*items mapped-later*/}
-        {/* onClick={deleteFromfavourites} */}
-        {/* buttonText='SAVE' */}
+      <Item title={items.title}
+      comemnt={item.comment}>
+
+
+      </Item>
+        onClick={deleteFromfavourites} 
+         buttonText='SAVE' 
     </div>
 </div>
   )
