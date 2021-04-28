@@ -32,22 +32,29 @@ const scrapFunc = async (url) => {
 	// const ansArr = await page.evaluate(() =>
 	// 	document.querySelector('#answer-632249')
 	// );
-	// const content = await page.evaluate(() => {
-    //     const contentArr = []
-    //     document.querySelector('.container > #content > div > div > #mainbar > #answers > .answer > div > ')
-    //             .querySelectorAll('p')
-    //             .forEach( p => contentArr.push(p.innerText))
-    //     return contentArr
-	// 	// .join(' ').replace(/[\"]/g,'')
-    // })
+	const content = await page.evaluate(() => {
+        const contentArr = [];
+        let a = document.querySelectorAll('.answer');
+        // document.querySelector('.container #content + div + div #mainbar #answers .answer .post-layout .answercell .js-post-body')
+
+                // .querySelectorAll('p')
+                // .forEach( p => contentArr.push(p.innerText))
+                // .forEach( p => {
+				// 	console.log(p)	
+				// })
+		return (a);
+        // return contentArr
+		// .join(' ').replace(/[\"]/g,'')
+    });
+	console.log(content);
 	// console.log(ansArr);
 	// ansArr.forEach((ans) => {
 	// 	console.log(ans);
 	// });
 
 	console.log(titleQuestion);
+	await browser.close();
 	return titleQuestion;
-	// await browser.close();
 }
 
 module.exports = scrapFunc;

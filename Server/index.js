@@ -5,7 +5,7 @@ require('./db/mongoose');
 const app = express();
 // const puppeteer = require('./scraping/scrap');
 const router = new express.Router();
-const accountRouter = require('./routers/user');
+const accountRouter = require('./routers/user.routes');
 
 //express uses
 app.use(cors());

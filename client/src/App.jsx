@@ -19,7 +19,7 @@ export default function App() {
            <Route path='/Items' 
            component=
            {Items} />
-          <Route path='/Favourites' component=
+          <Route path='/Favorities' component=
            {Favourites} />
          </Switch>
          </Router>     

@@ -29,8 +29,8 @@ const updateSearch = (e) => {
   const createAccount = async () => { 
     console.log(search)
     // const { data } = await axios.post('http://localhost:3001/api/users',{ "url": search } ); 
-  const {title} = await axios.post('http://localhost:3001/api/users',{ "url": search } ); 
-
+  const {title} = await axios.post('/api/users',{ "url": search } ); 
+    console.log(title);
     setUserData([title]); 
   }; 
 
@@ -49,6 +49,7 @@ return(
           Search
         </button>
       </form>
+      <p>{'content' + userData}</p>
     <div className='ITEMS'>
       {/* <Item title={items.title}
       comemnt={item.comment}
