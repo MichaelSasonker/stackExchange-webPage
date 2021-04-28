@@ -19,6 +19,7 @@ router.post('/api/users', async (req, res) => {
 	// const body = await scrap(url);
 	// const question = new User(req.body);
 	// console.log(body[0]);
+	// console.log('good')
 	const sc = await scrap;
 	console.log(sc);
 

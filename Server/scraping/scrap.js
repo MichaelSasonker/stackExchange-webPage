@@ -23,8 +23,16 @@ module.exports = (async () => {
 		() => document.querySelector('.question-hyperlink').textContent
 	);
 	const ansArr = await page.evaluate(() =>
-		document.querySelectorAll('#answers > .answer > .post-layout > p')
+		document.querySelector('#answer-632249')
 	);
+	// const content = await page.evaluate(() => {
+    //     const contentArr = []
+    //     document.querySelector('.container > #content > div > div > #mainbar > #answers > .answer > div > ')
+    //             .querySelectorAll('p')
+    //             .forEach( p => contentArr.push(p.innerText))
+    //     return contentArr
+	// 	// .join(' ').replace(/[\"]/g,'')
+    // })
 	console.log(ansArr);
 	// ansArr.forEach((ans) => {
 	// 	console.log(ans);

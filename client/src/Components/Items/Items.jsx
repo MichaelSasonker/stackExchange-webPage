@@ -1,36 +1,59 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 export default function Items() {
-    const [items, setitems] = useState([]);
-    const [search, setSearch] = useState('');
-    const [query, setQuery] = useState('https://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide');
+  const [items, setItems] = useState([]);
+  const [search, setSearch] = useState('');
+  // const [query, setQuery] = useState('https://stackoverflow.com/questions/315911/git-for-beginners-the-definitive-practical-guide');
+  const [userData, setUserData] = '';
 
-useEffect(() => {
-    getItems();
-  }, [query]);
- 
-const getItems = async () => {
-  };
+// useEffect(() => {
+//     getItems();
+//   }, [query]);
+
+// const getItems = async () => {
+//     console.log('a');
+//   };
 
 const updateSearch = (e) => {
     setSearch(e.target.value);
   };
+
 //prevent
-const getSearch = (e) => {
+  const getSearch = (e) => {
     e.preventDefault();
-    setQuery(search);
+    // setQuery(search);
     setSearch('');
-  
+  }
+
+  const createAccount = async () => { 
+    console.log(search)
+    const { data } = await axios.post('http://localhost:3001/api/users',{ "body.url": search} ); 
+    setUserData([data]); 
+  }; 
+
 return(
     <div className='CONTAINER'>
+           <form onSubmit={getSearch} className="search-form">
+        <input
+          className='search-bar'
+          placeholder='Type here'
+          type='text'
+          value={search}
+          onChange={updateSearch}
+        />
+        <button className='search-button' type='Submit' onClick={(e) => createAccount()}>
+          Search
+        </button>
+      </form>
     <div className='ITEMS'>
-        {/*items mapped-later*/}
-        {/* onClick={deleteFromfavourites} */}
-        {/* buttonText='SAVE' */}
+      {/* <Item title={items.title}
+      comemnt={item.comment}
+        secondComment={item.secondComment}>
+      </Item> */}
+        {/* {onClick={deleteFromfavourites}
+        buttonText='SAVE'} */}
     </div>
-</div>
+  </div>
   )
- }
 }
-
-
